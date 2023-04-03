@@ -8,6 +8,7 @@
   * [Installation](#installation)
   * [Usage](#usage)
   * [License](#license)
+  * [Screenshots](#screenshots)
   * [Contributing](#contributing)
   * [Tests](#tests)
   * [Questions](#questions)
