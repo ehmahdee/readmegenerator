@@ -14,7 +14,7 @@
   
   ## Installation
   
-  This app requires node inquirer 8.2.4, nodejs, and node jest.
+  This app requires nodejs, node inquirer 8.2.4, and node jest.
 
   ## Usage
 
@@ -22,13 +22,11 @@
 
   ## License
 
-  [![License: No License](https://img.shields.io/badge/License-No License-blue.svg)](https://opensource.org/licenses/No License)
-
-  [License](#license)
+  [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
   
-  This project is licensed under the No License license.
+  This project is licensed under the MIT license.
 
-  ## Screenshots
+   ## Screenshots
   [screencastify](https://drive.google.com/file/d/1KYBUkzT7ab52LNaGKWi5qd_i9p76y0hp/view)
 
   ## Contributions and Credits
