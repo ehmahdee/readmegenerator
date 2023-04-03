@@ -35,7 +35,7 @@
 
   ## Test Commands
 
-  Run this app using node index.js
+  Run this app using node index.js command in the terminal.
 
   ## Questions
 
