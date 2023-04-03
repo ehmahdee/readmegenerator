@@ -3,6 +3,8 @@ const inquirer = require('inquirer')
 const fs = require('fs');
 const util = require("util");
 
+const generatorMarkdown = require('./utils/generateMarkdown')
+
 // TODO: Create an array of questions for user input
 const questions = [
     {
@@ -26,9 +28,17 @@ const questions = [
         name:"usage"
     },
     {
-        type: "input",
+        type: "list",
         message: 'What is your projects selected license?',
         name: 'license',
+        choices: [
+            "Apache",
+            "GNU",
+            "MIT",
+            "GPL",
+            "BSD",
+            "None"
+          ]
     },
     {
         type: 'input',
@@ -39,11 +49,6 @@ const questions = [
         type: 'input',
         message: 'What are the test instructions?',
         name: 'test',
-    },
-    {
-        type: 'input',
-        message: 'Please advise on how someone should reach out to you for questions.',
-        name: 'questions',
     },
     {
         type: 'input',
@@ -58,25 +63,27 @@ const questions = [
     
 ];
 
-    //options for licenses here
-
-    //license badges here
-
-    //function to add badges to readme
-
-    //enter github username
-
-    //enter email address
-
-    //add email to QUESTIONS section with instruction on how to reach me with additional questions
-
-    //make links clickable in the table of contents
-
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
+function writeToFile(fileName, data) {
+    fs.writeFile(fileName, data, function(err) {
+        console.log(fileName);
+        console.log(data);
+        if (err) {
+            return console.log(err);
+        } else {
+            console.log("success!");
+        }
+    })
+}
 
 // TODO: Create a function to initialize app
-function init() {}
+function init() {
+    inquirer.prompt(questions)
+    .then(function(data) {
+        writeToFile("README.md", generatorMarkdown(data));
+        console.log(data);
+    })
+}
 
 // Function call to initialize app
 init();
